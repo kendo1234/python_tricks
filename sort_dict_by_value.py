@@ -1,4 +1,4 @@
-xs = {'a':1, 'b':2, 'c':3, 'd':4}
+xs = {'a':4, 'b':3, 'c':2, 'd':1}
 
 
 # Now, what it does is reverse sort the the list on the basis of first element
@@ -17,4 +17,6 @@ sorted(xs.items(), key=lambda x: x[1])
 import operator
 
 sorted(xs.items(), key=operator.itemgetter(1))
+
+
 
