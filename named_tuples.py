@@ -2,6 +2,8 @@
 # like lists. The differences between tuples and lists are, the tuples cannot be
 # changed unlike lists and tuples use parentheses, whereas lists use square
 # brackets.
+# Tuples are immutable which means you cannot update or change the values of
+# tuple elements.
 from collections import namedtuple
 
 Car = namedtuple('Car', 'color mileage')
