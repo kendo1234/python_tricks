@@ -4,8 +4,8 @@ import threading
 import time
 from numpy.random import choice
 
-username = "kentalbot2"
-access_key = "xasyDXuuurZJx6hDzaWS"
+username = "[BS USER]"
+access_key = "[BS KEY]"
 
 url = "http://rentalcars.com"
 
