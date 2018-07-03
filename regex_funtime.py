@@ -16,7 +16,7 @@ mo = phoneNumRegex.search('My number is 415-555-4242.')
 areaCode, mainNumber = mo.groups()
 
 # Pipe | can match multiple expressions
-heroRegex = re.compile (r'Batman|Tina Fey')
+heroRegex = re.compile(r'Batman|Tina Fey')
 mo1 = heroRegex.search('Batman and Tina Fey.')
 mo2 = heroRegex.search('Tina Fey and Batman.')
 
@@ -33,9 +33,20 @@ phoneRegex = re.compile(r'(\d\d\d-)?\d\d\d-\d\d\d\d')
 mo5 = phoneRegex.search('My number is 415-555-4242')
 mo6 = phoneRegex.search('My number is 555-4242')
 
+# asterix means match zero or more
+# Note in the two examples, wo is matched once in mo7 and 4 times in mo8
+batRegex = re.compile(r'Bat(wo)*man')
+mo7 = batRegex.search('The Adventures of Batman')
+mo8 = batRegex.search('The Adventures of Batwowowowoman')
 
+# + means match one or more
+batRegex = re.compile(r'Bat(wo)+man')
+mo9 = batRegex.search('The Adventures of Batwoman')
+mo10 = batRegex.search('The Adventures of Batwowowowoman')
 
-
+# Curly braces matches a specified number of repetition of the designated characters
+haRegex = re.compile(r'(Ha){3}')
+mo11 = haRegex.search('HaHaHa')
 
 print(mo.group(1))
 print(mo.group(2))
@@ -49,8 +60,8 @@ print(mo2.group())
 print(mo3.group())
 print(mo5.group())
 print(mo6.group())
-
-
-
-
-
+print(mo7.group())
+print(mo8.group())
+print(mo9.group())
+print(mo10.group())
+print(mo11.group())
