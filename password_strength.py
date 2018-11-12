@@ -1,8 +1,3 @@
-#! /usr/bin/env python3
-
-# Practice Chap. 7
-# Password Strength Tester
-
 import re
 
 
